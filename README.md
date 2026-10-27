@@ -11,7 +11,7 @@ To add a new equation card:
 1. Draw a box over the equation in inkscape and give it an id starting with `prc-` (e.g. `prc-53`).
 2. Add an entry with the same `id` to equations.json.
 
-Embedded images in the svg are stored at roughly 4x their displayed size to keep the page small. If you re-export the card from inkscape, check the file size (it should be well under 1 MB).
+Embedded images in the svg are stored at roughly 4x their displayed size to keep the page small. The svg is also minified (svgo, keeping all ids); the unminified inkscape file is in the git history before the minification commit. If you re-export the card from inkscape, check the file size (it should be well under 1 MB).
 
 The popup engine is `irdc.js` (with `irdc.css`). Both files are identical in all four card repos (iRDC300, iRDC450, iFNEK, iFNEK_C): make a change in one and copy the file unchanged to the other three. Each index.html only sets the card's SVG and data file names (`window.IRDC = { svg: ..., data: ... }`) and any card-specific popup styles.
 Hotspots can be reached with Tab and opened with Enter; Esc or a click outside closes the popup. On phones the card scrolls sideways at full size and the popup appears along the bottom of the screen.
