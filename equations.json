@@ -1,0 +1,1544 @@
+[
+  {
+    "id": "prc-1",
+    "column": "left",
+    "title": "Equation 1: Elemental Atomic Mass by Abundance",
+    "equations": [
+      "\\[A_x = \\sum_i \\gamma_i A_i\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(A_x\\)",
+        "def": "Atomic mass of element x [g/mol or amu]"
+      },
+      {
+        "sym": "\\(\\gamma_i\\)",
+        "def": "Isotopic abundance of isotope i [-]"
+      },
+      {
+        "sym": "\\(A_i\\)",
+        "def": "Atomic mass of isotope i [g/mol or amu]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Atomic mass of an element calculated as the sum of isotopic atomic masses weighted by their isotopic abundances."
+      }
+    ]
+  },
+  {
+    "id": "prc-2",
+    "column": "left",
+    "title": "Equation 2: Weight Fraction Calculation",
+    "equations": [
+      "\\[w_x = \\frac{n A_x}{n A_x + m A_y}\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(w_x\\)",
+        "def": "Weight fraction of element x [-]"
+      },
+      {
+        "sym": "\\(n\\)",
+        "def": "Number of x atoms in compound [-]"
+      },
+      {
+        "sym": "\\(A_x\\)",
+        "def": "Atomic mass of element x [g/mol or amu]"
+      },
+      {
+        "sym": "\\(m\\)",
+        "def": "Number of y atoms in compound [-]"
+      },
+      {
+        "sym": "\\(A_y\\)",
+        "def": "Atomic mass of element y [g/mol or amu]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Weight fraction of element x in a two-component compound."
+      }
+    ]
+  },
+  {
+    "id": "prc-3",
+    "column": "middle",
+    "title": "Equation 3: Elemental Atomic Mass by Weight Fraction",
+    "equations": [
+      "\\[A_x = \\Bigl[\\sum_i \\frac{w_i}{A_i}\\Bigr]^{-1}\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(A_x\\)",
+        "def": "Atomic mass of element x [g/mol or amu]"
+      },
+      {
+        "sym": "\\(w_i\\)",
+        "def": "Weight fraction of isotope i [-]"
+      },
+      {
+        "sym": "\\(A_i\\)",
+        "def": "Atomic mass of isotope i [g/mol or amu]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Atomic mass of element calculated by weight fraction of each isotope."
+      }
+    ]
+  },
+  {
+    "id": "prc-4",
+    "column": "left",
+    "title": "Equation 4: Number Density using Number Fraction",
+    "equations": [
+      "\\[N_i = \\frac{\\gamma_i \\rho_x N_A}{A_x}\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(N_i\\)",
+        "def": "Number density of isotope i [#/cm<sup>3</sup>]"
+      },
+      {
+        "sym": "\\(\\gamma_i\\)",
+        "def": "Abundance (or number fraction) of isotope i [-]"
+      },
+      {
+        "sym": "\\(\\rho_x\\)",
+        "def": "Elemental mass density [g/cm<sup>3</sup>]"
+      },
+      {
+        "sym": "\\(N_A\\)",
+        "def": "Avogadro&#x27;s number [#/mol]"
+      },
+      {
+        "sym": "\\(A_x\\)",
+        "def": "Atomic mass of element x [g/mol]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Number density (particles per unit volume) for isotope i calcuated using number fraction or abundance."
+      }
+    ]
+  },
+  {
+    "id": "prc-5",
+    "column": "left",
+    "title": "Equation 5: Mass Density of Element x",
+    "equations": [
+      "\\[\\rho_x = w_x \\rho\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(\\rho_x\\)",
+        "def": "Density of element x [g/cm<sup>3</sup>]"
+      },
+      {
+        "sym": "\\(w_x\\)",
+        "def": "Weight fraction of element x [-]"
+      },
+      {
+        "sym": "\\(\\rho\\)",
+        "def": "Compound density [g/cm<sup>3</sup>]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Element density expressed as the mass fraction of a component times the compound density."
+      }
+    ]
+  },
+  {
+    "id": "prc-6",
+    "column": "middle",
+    "title": "Equation 6: Number Density from Weight Fraction",
+    "equations": [
+      "\\[N_i = \\frac{w_i \\rho_x N_A}{A_i}\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(N_i\\)",
+        "def": "Number density of isotope i [#/cm<sup>3</sup>]"
+      },
+      {
+        "sym": "\\(w_i\\)",
+        "def": "Weight fraction of isotope i [-]"
+      },
+      {
+        "sym": "\\(\\rho_x\\)",
+        "def": "Mass density of element x [g/cm<sup>3</sup>]"
+      },
+      {
+        "sym": "\\(N_A\\)",
+        "def": "Avogadro&#x27;s number [#/mol]"
+      },
+      {
+        "sym": "\\(A_i\\)",
+        "def": "Atomic mass of isotope i [g/mol]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Number density for isotope i calculated using weight fraction"
+      }
+    ]
+  },
+  {
+    "id": "prc-7",
+    "column": "middle",
+    "title": "Equation 7: Kinetic Energy (relativistic form)",
+    "equations": [
+      "\\[T = mc^2 - m_0 c^2\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(T\\)",
+        "def": "Kinetic energy [MeV]"
+      },
+      {
+        "sym": "\\(m\\)",
+        "def": "Relativistic mass [amu]"
+      },
+      {
+        "sym": "\\(m_0\\)",
+        "def": "Rest mass [amu]"
+      },
+      {
+        "sym": "\\(c^2\\)",
+        "def": "Mass-energy equivalence factor, 931.494013 [MeV/amu]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Relativistic kinetic energy expressed as a mass difference between relativistic mass and rest mass."
+      }
+    ]
+  },
+  {
+    "id": "prc-8",
+    "column": "right",
+    "title": "Equation 8: Rest Mass Energy",
+    "equations": [
+      "\\[E_0 = m_0 c^2\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(E_0\\)",
+        "def": "Rest mass energy [MeV]"
+      },
+      {
+        "sym": "\\(m_0\\)",
+        "def": "Rest mass [amu]"
+      },
+      {
+        "sym": "\\(c^2\\)",
+        "def": "Mass-energy equivalence factor, 931.494013 [MeV/amu]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Einstein&#x27;s mass–energy relation giving the rest energy associated with a particle&#x27;s rest mass."
+      }
+    ]
+  },
+  {
+    "id": "prc-9",
+    "column": "right",
+    "title": "Equation 9: Relativistic Mass",
+    "equations": [
+      "\\[m = \\frac{m_0}{\\sqrt{1-(v/c)^2}}\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(m\\)",
+        "def": "Relativistic mass [amu]"
+      },
+      {
+        "sym": "\\(m_0\\)",
+        "def": "Rest mass [amu]"
+      },
+      {
+        "sym": "\\(v\\)",
+        "def": "Particle speed [m/s]"
+      },
+      {
+        "sym": "\\(c\\)",
+        "def": "Speed of light, 2.99792458 &times; 10<sup>8</sup> [m/s]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Expression for relativistic mass as a function of velocity; used in special relativity to relate moving and rest mass."
+      }
+    ]
+  },
+  {
+    "id": "prc-10",
+    "column": "middle",
+    "title": "Equation 10: De Broglie Wavelength",
+    "equations": [
+      "\\[\\lambda = \\frac{h}{p}\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(\\lambda\\)",
+        "def": "Wavelength [m]"
+      },
+      {
+        "sym": "\\(h\\)",
+        "def": "Planck&#x27;s constant, 6.626 &times; 10<sup>-34</sup> [J-s]"
+      },
+      {
+        "sym": "\\(p\\)",
+        "def": "Momentum [kg·m/s]"
+      }
+    ],
+    "description": [
+      {
+        "p": "The de Broglie relation linking a particle&#x27;s wavelength to its momentum."
+      }
+    ]
+  },
+  {
+    "id": "prc-11",
+    "column": "right",
+    "title": "Equation 11: Photon Energy",
+    "equations": [
+      "\\[E = h \\nu\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(E\\)",
+        "def": "Energy of photon [J]"
+      },
+      {
+        "sym": "\\(h\\)",
+        "def": "Planck&#x27;s constant, 6.626 &times; 10<sup>-34</sup> [J-s]"
+      },
+      {
+        "sym": "\\(\\nu\\)",
+        "def": "Frequency [Hz]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Planck&#x27;s relation giving the energy of a photon in terms of its frequency."
+      }
+    ]
+  },
+  {
+    "id": "prc-12",
+    "column": "right",
+    "title": "Equation 12: Photon Momentum",
+    "equations": [
+      "\\[p = \\frac{E}{c}\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(p\\)",
+        "def": "Momentum [kg-m/s]"
+      },
+      {
+        "sym": "\\(E\\)",
+        "def": "Energy of photon [J]"
+      },
+      {
+        "sym": "\\(c\\)",
+        "def": "Speed of light, 2.99792458 &times; 10<sup>8</sup> [m/s]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Relationship between momentum and energy for a photon. Only applicable for photons."
+      }
+    ]
+  },
+  {
+    "id": "prc-13",
+    "column": "left",
+    "title": "Equation 13: Semi-empirical Mass (Weizsäcker) Formula",
+    "equations": [
+      "\\[E_B = a_v A - a_s A^{2/3} - a_c \\frac{Z^2}{A^{1/3}} - a_a \\frac{(A-2Z)^2}{A} - \\frac{\\pm a_p}{\\sqrt{A}}\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(E_B\\)",
+        "def": "Binding energy [MeV]"
+      },
+      {
+        "sym": "\\(a_v\\)",
+        "def": "Volume coefficient, 15.835 [MeV]"
+      },
+      {
+        "sym": "\\(a_s\\)",
+        "def": "Surface coefficient, 18.33 [MeV]"
+      },
+      {
+        "sym": "\\(a_c\\)",
+        "def": "Coulomb coefficient, 0.714 [MeV]"
+      },
+      {
+        "sym": "\\(a_a\\)",
+        "def": "Asymmetry coefficient, 23.20 [MeV]"
+      },
+      {
+        "sym": "\\(\\pm a_p\\)",
+        "def": "Pairing coefficient, used with its sign: +11.2 MeV if Z and N are both odd (o/o), 0 if A is odd (e/o or o/e), &minus;11.2 MeV if Z and N are both even (e/e) [MeV]"
+      },
+      {
+        "sym": "\\(A\\)",
+        "def": "Atomic mass number [-]"
+      },
+      {
+        "sym": "\\(Z\\)",
+        "def": "Atomic number [-]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Semi-empirical formula estimating nuclear binding energy using five terms: volume, surface, Coulomb, asymmetry, and pairing."
+      },
+      {
+        "p": "The pairing term is subtracted, so with the signs above an even-even nucleus gains \\(11.2/\\sqrt{A}\\) MeV of binding and an odd-odd nucleus loses it."
+      }
+    ]
+  },
+  {
+    "id": "prc-14",
+    "column": "left",
+    "title": "Equation 14: Binding Energy from Masses",
+    "equations": [
+      "\\[BE(^{A}_{Z}X) = [Z M(^{1}_{1}H) + (A-Z) m_n - M(^{A}_{Z}X)] c^2\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(BE(^{A}_{Z}X)\\)",
+        "def": "Binding energy of nucleus \\(^{A}_{Z}X\\) [MeV]"
+      },
+      {
+        "sym": "\\(M(^{1}_{1}H)\\)",
+        "def": "Mass of hydrogen-1 atom [amu]"
+      },
+      {
+        "sym": "\\(m_n\\)",
+        "def": "Mass of neutron [amu]"
+      },
+      {
+        "sym": "\\(M(^{A}_{Z}X)\\)",
+        "def": "Atomic mass of the neutral atom \\(^{A}_{Z}X\\) (nucleus plus Z electrons) [amu]"
+      },
+      {
+        "sym": "\\(c^2\\)",
+        "def": "Mass-energy equivalence factor, 931.494013 [MeV/amu]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Binding energy computed from the mass difference between the separated constituents and the atom. All masses are neutral-atom (tabulated) masses: the Z electrons in \\(M(^{A}_{Z}X)\\) cancel the Z electrons counted in \\(Z\\,M(^{1}_{1}H)\\), which is why the hydrogen atom mass is used rather than the proton mass."
+      }
+    ]
+  },
+  {
+    "id": "prc-15",
+    "column": "left",
+    "title": "Equation 15: Neutron Separation Energy",
+    "equations": [
+      "\\[S_n(^{A}_{Z}X) = [M(^{A-1}_{Z}X) + m_n - M(^{A}_{Z}X)] c^2\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(S_n\\)",
+        "def": "Neutron separation energy [MeV]"
+      },
+      {
+        "sym": "\\(M(^{A-1}_{Z}X)\\)",
+        "def": "Mass of nuclide with one fewer neutron [amu]"
+      },
+      {
+        "sym": "\\(m_n\\)",
+        "def": "Mass of neutron [amu]"
+      },
+      {
+        "sym": "\\(M(^{A}_{Z}X)\\)",
+        "def": "Mass of original nuclide [amu]"
+      },
+      {
+        "sym": "\\(c^2\\)",
+        "def": "Mass-energy equivalence factor, 931.494013 [MeV/amu]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Energy required to remove a neutron from a nucleus — the neutron separation energy. Note: When using this equation for fission calculations, the process is running in reverse (neutron is being injected vs seperated), thus the original nuclide becomes \\(M(^{A-1}_{Z}X)\\)."
+      }
+    ]
+  },
+  {
+    "id": "prc-16",
+    "column": "middle",
+    "title": "Equation 16: Proton Separation Energy",
+    "equations": [
+      "\\[S_p(^{A}_{Z}Y) = [M(^{A-1}_{Z-1}X) + M(^{1}_{1}H) - M(^{A}_{Z}Y)] c^2\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(S_p\\)",
+        "def": "Proton separation energy [MeV]"
+      },
+      {
+        "sym": "\\(M(^{A}_{Z}Y)\\)",
+        "def": "Mass of original nuclide [amu]"
+      },
+      {
+        "sym": "\\(M(^{1}_{1}H)\\)",
+        "def": "Mass of hydrogen-1 [amu]"
+      },
+      {
+        "sym": "\\(M(^{A-1}_{Z-1}X)\\)",
+        "def": "Mass of nuclide with one fewer proton [amu]"
+      },
+      {
+        "sym": "\\(c^2\\)",
+        "def": "Mass-energy equivalence factor, 931.494013 [MeV/amu]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Energy required to remove a proton from a nucleus — the proton separation energy."
+      }
+    ]
+  },
+  {
+    "id": "prc-17",
+    "column": "left",
+    "title": "Equation 17: Q-value from Masses",
+    "equations": [
+      "\\[Q = \\left[\\sum m_{0,i} - \\sum m_{0,f} \\right] c^2\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(Q\\)",
+        "def": "Q-value, energy of reaction [MeV]"
+      },
+      {
+        "sym": "\\(\\sum m_{0,i}\\)",
+        "def": "Sum of initial rest masses [amu]"
+      },
+      {
+        "sym": "\\(\\sum m_{0,f}\\)",
+        "def": "Sum of final rest masses [amu]"
+      },
+      {
+        "sym": "\\(c^2\\)",
+        "def": "Mass-energy equivalence factor, 931.494013 [MeV/amu]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Energy released (Q-value) of a nuclear reaction computed from the difference in rest masses."
+      },
+      {
+        "p": "If you use tabulated atomic masses, the electrons must balance on both sides. They do automatically for most reactions and for \\(\\beta^-\\) decay, but not for \\(\\beta^+\\) decay, where \\(Q = [M(\\text{parent}) - M(\\text{daughter}) - 2m_e]c^2\\) (\\(2m_ec^2 = 1.022\\) MeV)."
+      }
+    ]
+  },
+  {
+    "id": "prc-18",
+    "column": "middle",
+    "title": "Equation 18: Q-value relation to Kinetic Energy Change",
+    "equations": [
+      "\\[Q = T_f - T_i\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(Q\\)",
+        "def": "Reaction Q-value, energy released in reaction [MeV]"
+      },
+      {
+        "sym": "\\(T_f\\)",
+        "def": "Final kinetic energy [MeV]"
+      },
+      {
+        "sym": "\\(T_i\\)",
+        "def": "Initial kinetic energy [MeV]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Alternate definition of Q-value as the change in total kinetic energy between final and initial states."
+      }
+    ]
+  },
+  {
+    "id": "prc-19",
+    "column": "left",
+    "title": "Equation 19: General Two-body Q Relation",
+    "equations": [
+      "\\[Q = T_1\\left(\\frac{m_1}{m_4}-1\\right)-\\frac{2}{m_4}\\sqrt{m_1 m_3 T_1 T_3}\\cos\\theta + T_3\\left(\\frac{m_3}{m_4}+1\\right)\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(Q\\)",
+        "def": "Reaction Q-value [MeV]"
+      },
+      {
+        "sym": "\\(T_1,T_3\\)",
+        "def": "Kinetic energies of small particles [MeV]"
+      },
+      {
+        "sym": "\\(m_1,m_3,m_4\\)",
+        "def": "Masses of particles [amu]"
+      },
+      {
+        "sym": "\\(\\theta\\)",
+        "def": "Scattering angle [&deg;]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Kinematic relation for Q in a binary reaction including masses, kinetic energies and scattering angle. Implied nomenclature: 1+2 &rarr; 3+4. 1 and 3 are light particles; 2 and 4 are heavy particles. Particle 2 must be stationary."
+      }
+    ]
+  },
+  {
+    "id": "prc-20",
+    "column": "left",
+    "title": "Equation 20: Number of Atoms from Mass",
+    "equations": [
+      "\\[N = \\frac{m N_A}{A}\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(N\\)",
+        "def": "Number of atoms [-]"
+      },
+      {
+        "sym": "\\(m\\)",
+        "def": "Mass [g]"
+      },
+      {
+        "sym": "\\(N_A\\)",
+        "def": "Avogadro's number, 6.02214199 &times; 10<sup>23</sup> [#/mol]"
+      },
+      {
+        "sym": "\\(A\\)",
+        "def": "Atomic mass [g/mol]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Converts mass to number of atoms using Avogadro's number and molar mass."
+      }
+    ]
+  },
+  {
+    "id": "prc-21",
+    "column": "left",
+    "title": "Equation 21: Activity-Number Relation",
+    "equations": [
+      "\\[A = \\lambda N\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(A\\)",
+        "def": "Activity [Bq or decays/s]"
+      },
+      {
+        "sym": "\\(\\lambda\\)",
+        "def": "Decay constant [s<sup>-1</sup>]"
+      },
+      {
+        "sym": "\\(N\\)",
+        "def": "Number of radioactive nuclei [-]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Relationship of activity to number of radioactive particles."
+      }
+    ]
+  },
+  {
+    "id": "prc-22",
+    "column": "left",
+    "title": "Equation 22: Half-life to Decay Constant Relationship",
+    "equations": [
+      "\\[T_{1/2} = \\frac{\\ln 2}{\\lambda}\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(T_{1/2}\\)",
+        "def": "Half-life [s]"
+      },
+      {
+        "sym": "\\(\\lambda\\)",
+        "def": "Decay constant [s<sup>-1</sup>]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Relationship between decay constant and half-life."
+      }
+    ]
+  },
+  {
+    "id": "prc-23",
+    "column": "left",
+    "title": "Equation 23: Mean Lifetime",
+    "equations": [
+      "\\[\\bar{T} = \\frac{1}{\\lambda}\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(T\\)",
+        "def": "Mean lifetime [s]"
+      },
+      {
+        "sym": "\\(\\lambda\\)",
+        "def": "Decay constant [1/s]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Mean (expectation) lifetime of an unstable nuclide."
+      }
+    ]
+  },
+  {
+    "id": "prc-24",
+    "column": "left",
+    "title": "Equation 24: Decay of Radioactive Nuclei",
+    "equations": [
+      "\\[N(t) = N_0 e^{-\\lambda t}\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(N(t)\\)",
+        "def": "Number of radioactive nuclei at time t [-]"
+      },
+      {
+        "sym": "\\(N_0\\)",
+        "def": "Initial number [-]"
+      },
+      {
+        "sym": "\\(\\lambda\\)",
+        "def": "Decay constant [1/s]"
+      },
+      {
+        "sym": "\\(t\\)",
+        "def": "Time [s]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Standard radioactive exponential decay law for the number of nuclei."
+      }
+    ]
+  },
+  {
+    "id": "prc-25",
+    "column": "left",
+    "title": "Equation 25: Exponential Decay of Activity",
+    "equations": [
+      "\\[A(t) = A_0 e^{-\\lambda t}\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(A(t)\\)",
+        "def": "Activity at time t [Bq or Ci]"
+      },
+      {
+        "sym": "\\(A_0\\)",
+        "def": "Initial activity [Bq or Ci]"
+      },
+      {
+        "sym": "\\(\\lambda\\)",
+        "def": "Decay constant [1/s]"
+      },
+      {
+        "sym": "\\(t\\)",
+        "def": "Time [s]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Exponential decay of activity of radioactive species."
+      }
+    ]
+  },
+  {
+    "id": "prc-26",
+    "column": "left",
+    "title": "Equation 26: Kinematic Threshold of Reaction",
+    "equations": [
+      "\\[E_{K1} \\approx -\\left(1+\\frac{m_1}{m_2}\\right)Q\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(E_{K1}\\)",
+        "def": "Kinematic Threshold energy of Particle 1 [MeV]"
+      },
+      {
+        "sym": "\\(m_1,m_2\\)",
+        "def": "Mass of particle 1 or 2 [amu]"
+      },
+      {
+        "sym": "\\(Q\\)",
+        "def": "Reaction Q-value [MeV]"
+      }
+    ],
+    "description": [
+      {
+        "p": "An Expression for kinematic threshold energy for endoergic nuclear reaction. Reaction energy is provided by initial kinetic energy."
+      }
+    ]
+  },
+  {
+    "id": "prc-27",
+    "column": "left",
+    "title": "Equation 27: Coulombic Barrier Threshold Energy",
+    "equations": [
+      "\\[E_{1}^{C} \\approx 1.2\\;\\frac{Z_1 Z_2}{A_{1}^{1/3} + A_2^{1/3}}\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(E_{1}^{C}\\)",
+        "def": "Coulombic barrier energy [MeV]"
+      },
+      {
+        "sym": "\\(Z_1,Z_2\\)",
+        "def": "Atomic numbers of reactant nuclei [-]"
+      },
+      {
+        "sym": "\\(A_1,A_2\\)",
+        "def": "Mass numbers of reactant nuclei [-]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Estimate of Coulombic barrier between two nuclei — energy needed to overcome electrostatic repulsion for fusion or reaction."
+      }
+    ]
+  },
+  {
+    "id": "prc-28",
+    "column": "left",
+    "title": "Equation 28: Excitation Energy",
+    "equations": [
+      "\\[E^* = S_n + T_n\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(E^*\\)",
+        "def": "Excitation energy of compound nucleus [MeV]"
+      },
+      {
+        "sym": "\\(S_n\\)",
+        "def": "Neutron separation energy [MeV]"
+      },
+      {
+        "sym": "\\(T_n\\)",
+        "def": "Incident neutron kinetic energy [MeV]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Excitation energy of a compound nucleus after absorption of neutron. Used for comparing excitation energy to threshold energy for fission."
+      }
+    ]
+  },
+  {
+    "id": "prc-29",
+    "column": "left",
+    "title": "Equation 29: Threshold Energy",
+    "equations": [
+      "\\[E_{1}^{th} = \\max(E_1^K,\\;E_1^C)\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(E_{1}^{th}\\)",
+        "def": "Threshold energy for reaction [MeV]"
+      },
+      {
+        "sym": "\\(E_{1}^{K}\\)",
+        "def": "Kinematic threshold energy [MeV]"
+      },
+      {
+        "sym": "\\(E_{1}^{C}\\)",
+        "def": "Coulombic barrier energy [MeV]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Reaction threshold energy is the greater of kinematic and Coulomb barrier thresholds. The energy must be supplied by the kinetic energy of the incident particle, 1."
+      }
+    ]
+  },
+  {
+    "id": "prc-30",
+    "column": "middle",
+    "title": "Equation 30: Attenuation of Photon Intensity",
+    "equations": [
+      "\\[I(x) = I_0 e^{-\\mu_t x}\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(I(x)\\)",
+        "def": "Intensity of photons at distance x [1/(cm<sup>2</sup>-s)]"
+      },
+      {
+        "sym": "\\(I_0\\)",
+        "def": "Initial photon intensity [1/(cm<sup>2</sup>-s)]"
+      },
+      {
+        "sym": "\\(\\mu_t\\)",
+        "def": "Total linear attenuation coefficient [1/cm]"
+      },
+      {
+        "sym": "\\(x\\)",
+        "def": "Distance [cm]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Exponential attenuation of photon beam intensity by a material."
+      },
+      {
+        "p": "This gives only the uncollided particles: those that have not interacted at all. Some scattered particles still reach the point of interest, so the actual flux (and dose) behind a shield is higher. Real shielding calculations multiply by a buildup factor \\(B \\geq 1\\)."
+      }
+    ]
+  },
+  {
+    "id": "prc-31",
+    "column": "right",
+    "title": "Equation 31: Neutron Flux Attenuation",
+    "equations": [
+      "\\[\\phi(x) = \\phi_0 e^{-\\Sigma_t x}\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(\\phi(x)\\)",
+        "def": "Neutron flux at position x [1/(cm<sup>2</sup>-s)]"
+      },
+      {
+        "sym": "\\(\\phi_0\\)",
+        "def": "Initial neutron flux [1/(cm<sup>2</sup>-s)]"
+      },
+      {
+        "sym": "\\(\\Sigma_t\\)",
+        "def": "Total macroscopic cross section [1/cm]"
+      },
+      {
+        "sym": "\\(x\\)",
+        "def": "Distance [cm]"
+      }
+    ],
+    "description": [
+      {
+        "p": "The uncollided neutron flux in a narrow beam decreases exponentially with distance in a medium."
+      },
+      {
+        "p": "This gives only the uncollided particles: those that have not interacted at all. Some scattered particles still reach the point of interest, so the actual flux (and dose) behind a shield is higher. Real shielding calculations multiply by a buildup factor \\(B \\geq 1\\)."
+      }
+    ]
+  },
+  {
+    "id": "prc-32",
+    "column": "middle",
+    "title": "Equation 32: Mean Free Path - Photon",
+    "equations": [
+      "\\[\\bar{x} = \\frac{1}{\\mu_t}\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(\\bar{x}\\)",
+        "def": "Mean free path [cm]"
+      },
+      {
+        "sym": "\\(\\mu_t\\)",
+        "def": "Linear attenuation coefficient [1/cm]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Mean distance a photon travels before an interaction."
+      }
+    ]
+  },
+  {
+    "id": "prc-33",
+    "column": "right",
+    "title": "Equation 33: Mean Free Path - Neutron",
+    "equations": [
+      "\\[\\bar{x} = \\frac{1}{\\Sigma_t}\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(\\bar{x}\\)",
+        "def": "Mean free path [cm]"
+      },
+      {
+        "sym": "\\(\\Sigma_t\\)",
+        "def": "Total macroscopic cross section [1/cm]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Mean free path for neutrons in a material."
+      }
+    ]
+  },
+  {
+    "id": "prc-34",
+    "column": "middle",
+    "title": "Equation 34: Mass Attenuation to Linear Attenuation Relationship",
+    "equations": [
+      "\\[\\mu_t = \\left(\\frac{\\mu_t}{\\rho}\\right)\\rho\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(\\mu_t\\)",
+        "def": "Total linear attenuation coefficient [1/cm]"
+      },
+      {
+        "sym": "\\(\\mu_t/\\rho\\)",
+        "def": "Mass attenuation coefficient [cm<sup>2</sup>/g]"
+      },
+      {
+        "sym": "\\(\\rho\\)",
+        "def": "Mass density [g/cm<sup>3</sup>]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Linear attenuation coefficient obtained from mass attenuation coefficient. Useful because mass attenuation coefficients are tabulated while linear attenuation coefficients may not be."
+      }
+    ]
+  },
+  {
+    "id": "prc-35",
+    "column": "right",
+    "title": "Equation 35: Macroscopic Cross Section",
+    "equations": [
+      "\\[\\Sigma_t = \\Sigma_s + \\Sigma_a\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(\\Sigma_t\\)",
+        "def": "Total macroscopic cross section [1/cm]"
+      },
+      {
+        "sym": "\\(\\Sigma_s\\)",
+        "def": "Macroscopic scattering cross section[1/cm]"
+      },
+      {
+        "sym": "\\(\\Sigma_a\\)",
+        "def": "Macroscopic absorption cross section[1/cm]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Total macroscopic cross section is the sum of the two possible neutron interactions: scattering and absorption."
+      }
+    ]
+  },
+  {
+    "id": "prc-36",
+    "column": "middle",
+    "title": "Equation 36: Mass Attenuation Coefficient Composition",
+    "equations": [
+      "\\[\\left(\\frac{\\mu_t}{\\rho}\\right)=\\sum_i \\left(\\frac{\\mu_i}{\\rho}\\right)\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(\\mu_t/\\rho\\)",
+        "def": "Total mass attenuation coefficient [cm<sup>2</sup>/g]"
+      },
+      {
+        "sym": "\\(\\mu_i/\\rho\\)",
+        "def": "Mass attenuation for each photon interaction type, i [cm<sup>2</sup>/g]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Mass attenuation coefficient is the sum of mass attenuation coefficient from each photon interaction type."
+      }
+    ]
+  },
+  {
+    "id": "prc-37",
+    "column": "right",
+    "title": "Equation 37: Macroscopic Cross Section Definition",
+    "equations": [
+      "\\[\\Sigma_i = N \\sigma_i(E) g_i(T)\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(\\Sigma_i\\)",
+        "def": "Macroscopic cross section for interaction i [1/cm]"
+      },
+      {
+        "sym": "\\(N\\)",
+        "def": "Number density of particular nuclide [1/cm<sup>3</sup>]"
+      },
+      {
+        "sym": "\\(\\sigma_i(E)\\)",
+        "def": "Microscopic cross section of interaction type i at energy E [cm<sup>2</sup>]"
+      },
+      {
+        "sym": "\\(g_i(T)\\)",
+        "def": "Westcott factor: non-1/v correction for thermal (Maxwellian-averaged) cross sections; equals 1 for 1/v absorbers and for non-thermal problems [-]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Macroscopic cross section equals number density times microscopic cross section (\\(\\Sigma = N\\sigma\\)). Microscopic cross sections are tabulated in barns and are dependent on the incident neutron energy."
+      },
+      {
+        "p": "The Westcott factor only matters when averaging over a thermal (Maxwellian) neutron spectrum, for nuclides whose cross section does not follow \\(1/v\\). The full thermal average also includes the factors \\(\\frac{\\sqrt{\\pi}}{2}\\sqrt{T_0/T}\\) applied to the 0.0253 eV value: \\(\\bar{\\sigma} = \\frac{\\sqrt{\\pi}}{2}\\, g(T) \\sqrt{T_0/T}\\, \\sigma(E_0)\\), with \\(T_0\\) = 293.6 K. For any other problem, take \\(g = 1\\)."
+      }
+    ]
+  },
+  {
+    "id": "prc-38",
+    "column": "middle",
+    "title": "Equation 38: Mass Attenuation for Mixtures (weighted)",
+    "equations": [
+      "\\[\\left(\\frac{\\mu_i}{\\rho}\\right)=\\sum_j w_j \\left(\\frac{\\mu_i}{\\rho}\\right)^j\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(\\mu_i/\\rho\\)",
+        "def": "Mass attenuation coefficient for interaction i [cm<sup>2</sup>/g]"
+      },
+      {
+        "sym": "\\(w_j\\)",
+        "def": "Weight fraction of component j [-]"
+      },
+      {
+        "sym": "\\((\\mu_i/\\rho)_j\\)",
+        "def": "Mass attenuation coefficient of interaction i for component j [cm<sup>2</sup>/g]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Composite mass attenuation coefficient formed from weight-fraction-weighted component contributions."
+      }
+    ]
+  },
+  {
+    "id": "prc-39",
+    "column": "right",
+    "title": "Equation 39: Point Source Flux with Attenuation",
+    "equations": [
+      "\\[\\phi(r) = \\frac{S_p}{4\\pi r^2} e^{-\\Sigma_t x}\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(\\phi(r)\\)",
+        "def": "Flux at distance r [1/(cm<sup>2</sup>-s)]"
+      },
+      {
+        "sym": "\\(S_p\\)",
+        "def": "Source strength [particles/s]"
+      },
+      {
+        "sym": "\\(r\\)",
+        "def": "Distance [cm]"
+      },
+      {
+        "sym": "\\(\\Sigma_t\\)",
+        "def": "Total macroscopic cross section, for neutrons [1/cm]"
+      },
+      {
+        "sym": "\\(\\mu_t\\)",
+        "def": "Linear attenuation coefficient, used in place of \\(\\Sigma_t\\) for photons [1/cm]"
+      },
+      {
+        "sym": "\\(x\\)",
+        "def": "Shield or medium thickness [cm]"
+      }
+    ],
+    "description": [
+      {
+        "p": "This equation works for both neutrons and photons, as geometric and exponential attenuation operate in the same way: flux from a point source decreases with the inverse square law and exponential attenuation in the medium. For photons, use \\(\\mu_t\\) instead of \\(\\Sigma_t\\)."
+      },
+      {
+        "p": "This gives only the uncollided particles: those that have not interacted at all. Some scattered particles still reach the point of interest, so the actual flux (and dose) behind a shield is higher. Real shielding calculations multiply by a buildup factor \\(B \\geq 1\\)."
+      }
+    ]
+  },
+  {
+    "id": "prc-40",
+    "column": "left",
+    "title": "Equation 40: Scattering Energy Transfer (lab frame)",
+    "equations": [
+      "\\[E' = \\frac{1}{(A+1)^2}\\Bigl(\\sqrt{E}\\cos\\theta_s + \\sqrt{E(A^2-1+\\cos^2\\theta_s)}\\Bigr)^2\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(E&#x27;\\)",
+        "def": "= Kinetic energy of scattered neutron [eV or MeV]"
+      },
+      {
+        "sym": "\\(E\\)",
+        "def": "Initial kinetic energy of neutron [eV or MeV]"
+      },
+      {
+        "sym": "\\(A\\)",
+        "def": "Target atomic mass number [-]"
+      },
+      {
+        "sym": "\\(\\theta_s\\)",
+        "def": "Scattering angle [&deg;]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Energy of a scattered neutron after collision with a nucleus; derived from two-body kinematics."
+      }
+    ]
+  },
+  {
+    "id": "prc-41",
+    "column": "left",
+    "title": "Equation 41: Average Scattered Energy",
+    "equations": [
+      "\\[E'_{av} = \\frac{1}{2} (E + \\alpha E)\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(E&#x27;_{av}\\)",
+        "def": "Average scattered neutron kinetic energy [eV or MeV]"
+      },
+      {
+        "sym": "\\(E\\)",
+        "def": "Initial neutron kinetic energy [eV or MeV]"
+      },
+      {
+        "sym": "\\(\\alpha\\)",
+        "def": "Collision parameter [-]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Average scattered energy from elastic neutron scattering reaction."
+      }
+    ]
+  },
+  {
+    "id": "prc-42",
+    "column": "middle",
+    "title": "Equation 42: Minimum Scattered Energy",
+    "equations": [
+      "\\[E'_{min} = \\alpha E\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(E&#x27;_{min}\\)",
+        "def": "Minimum scattered neutron kinetic energy [eV or MeV]"
+      },
+      {
+        "sym": "\\(\\alpha\\)",
+        "def": "Collision parameter [-]"
+      },
+      {
+        "sym": "\\(E\\)",
+        "def": "Initial neutron kinetic energy [eV or MeV]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Minimum resulting kinetic energy of neutron following an elastic scattering event."
+      }
+    ]
+  },
+  {
+    "id": "prc-43",
+    "column": "middle",
+    "title": "Equation 43: Collision Factor Definition",
+    "equations": [
+      "\\[\\alpha = \\left(\\frac{A-1}{A+1}\\right)^2\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(\\alpha\\)",
+        "def": "Collision parameter [-]"
+      },
+      {
+        "sym": "\\(A\\)",
+        "def": "Target atomic mass number [-]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Collision parameter definition. \\(\\alpha\\) is the smallest possible ratio \\(E'/E\\) after an elastic collision (a head-on collision), so the maximum fractional energy loss in one collision is \\(1 - \\alpha\\). For hydrogen (A = 1), \\(\\alpha = 0\\) and a neutron can lose all of its energy in one collision."
+      }
+    ]
+  },
+  {
+    "id": "prc-44",
+    "column": "left",
+    "title": "Equation 44: Logarithmic Energy Decrement Definition",
+    "equations": [
+      "\\[\\xi = 1 + \\frac{\\alpha}{1-\\alpha}\\ln\\alpha\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(\\xi\\)",
+        "def": "Average logarithmic energy decrement [-]"
+      },
+      {
+        "sym": "\\(\\alpha\\)",
+        "def": "Collision parameter [-]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Average logarithmic energy decrement per collision used in slowing-down theory for neutrons. Also referred to as average lethargy loss."
+      }
+    ]
+  },
+  {
+    "id": "prc-45",
+    "column": "middle",
+    "title": "Equation 45: Number of Collisions for Energy Change",
+    "equations": [
+      "\\[n = \\frac{1}{\\xi}\\ln\\frac{E_1}{E_2}\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(n\\)",
+        "def": "Average number of collisions [-]"
+      },
+      {
+        "sym": "\\(\\xi\\)",
+        "def": "Logarithmic energy loss per collision [-]"
+      },
+      {
+        "sym": "\\(E_1,E_2\\)",
+        "def": "Initial and final neutron kinetic energies [eV or MeV]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Number of collisions required to slow a particle from energy E<sub>1</sub> to E<sub>2</sub> for a target nuclide."
+      }
+    ]
+  },
+  {
+    "id": "prc-46",
+    "column": "left",
+    "title": "Equation 46: Reaction Rate \\(R_i\\)",
+    "equations": [
+      "\\[R_i = \\Sigma_i \\phi(E)\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(R_i\\)",
+        "def": "Reaction rate density for interaction i [reactions/(cm<sup>3</sup>-s)]"
+      },
+      {
+        "sym": "\\(\\Sigma_i\\)",
+        "def": "Macroscopic cross section for interaction i [1/cm]"
+      },
+      {
+        "sym": "\\(\\phi(E)\\)",
+        "def": "Neutron flux at energy E [1/(cm<sup>2</sup>-s)]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Reaction rate per unit volume obtained by multiplying macroscopic cross section by particle flux."
+      }
+    ]
+  },
+  {
+    "id": "prc-47",
+    "column": "left",
+    "title": "Equation 47: Six-Factor Formula for Criticality",
+    "equations": [
+      "\\[k_{eff} = \\varepsilon\\,p\\,f\\,\\eta\\,P_{NL}^{f}\\,P_{NL}^{th}\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(k_{eff}\\)",
+        "def": "Effective multiplication factor [-]"
+      },
+      {
+        "sym": "\\(\\varepsilon\\)",
+        "def": "Fast fission factor [-]"
+      },
+      {
+        "sym": "\\(p\\)",
+        "def": "Resonance escape probability [-]"
+      },
+      {
+        "sym": "\\(f\\)",
+        "def": "Thermal utilization factor [-]"
+      },
+      {
+        "sym": "\\(\\eta\\)",
+        "def": "Thermal reproduction factor, or thermal fission factor [-]"
+      },
+      {
+        "sym": "\\(P_{NL}^{f},P_{NL}^{th}\\)",
+        "def": "Non-leakage probabilities for fast and thermal neutrons [-]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Six-factor formula for calculating the criticality of a nuclear reactor. Must be a thermal reactor where neutrons are slowed down to the thermal spectrum."
+      }
+    ]
+  },
+  {
+    "id": "prc-48",
+    "column": "left",
+    "title": "Equation 48: Infinite Multiplication Factor \\(k_{\\infty}\\)",
+    "equations": [
+      "\\[k_{\\infty} = \\varepsilon\\,p\\,f\\,\\eta\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(k_{\\infty}\\)",
+        "def": "Infinite multiplication factor [-]"
+      },
+      {
+        "sym": "\\(\\varepsilon\\)",
+        "def": "Fast fission factor [-]"
+      },
+      {
+        "sym": "\\(p\\)",
+        "def": "Resonance escape probability [-]"
+      },
+      {
+        "sym": "\\(f\\)",
+        "def": "Thermal utilization factor [-]"
+      },
+      {
+        "sym": "\\(\\eta\\)",
+        "def": "Thermal reproduction factor, or thermal fission factor [-]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Four-factor formula for expressing the infinite multiplication factor of a reactor. That is, the multiplication factor if the reactor were infinitely large."
+      }
+    ]
+  },
+  {
+    "id": "prc-49",
+    "column": "left",
+    "title": "Equation 49: Fast Non-leakage Probability \\(P_{NL}^{f}\\)",
+    "equations": [
+      "\\[P_{NL}^{f} = e^{-B_C^2 \\tau _T}\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(P_{NL}^{f}\\)",
+        "def": "Fast non-leakage probability [-]"
+      },
+      {
+        "sym": "\\(B_C\\)",
+        "def": "Core buckling [1/cm]"
+      },
+      {
+        "sym": "\\(\\tau _T\\)",
+        "def": "Fermi age, material property [cm<sup>2</sup>]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Approximate form expressing the probability that fast neutrons do not leak from the core; depends on geometry and material properties."
+      }
+    ]
+  },
+  {
+    "id": "prc-50",
+    "column": "left",
+    "title": "Equation 50: Thermal Non-Leakage Probability \\(P_{NL}^{th}\\)",
+    "equations": [
+      "\\[P_{NL}^{th} = \\frac{1}{1 + L_T^2 B_C^2}\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(P_{NL}^{th}\\)",
+        "def": "Thermal non-leakage probability [-]"
+      },
+      {
+        "sym": "\\(L_T\\)",
+        "def": "Thermal diffusion length, material property [cm]"
+      },
+      {
+        "sym": "\\(B_C\\)",
+        "def": "Core buckling [1/cm]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Thermal non-leakage probability in diffusion approximation; dependent on geometry and material properties."
+      }
+    ]
+  },
+  {
+    "id": "prc-51",
+    "column": "middle",
+    "title": "Equation 51: Thermal Utilization Factor f",
+    "equations": [
+      "\\[f = \\frac{\\Sigma_a^F}{\\Sigma_a^F + \\Sigma_a^{NF}}\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(f\\)",
+        "def": "Thermal utilization factor [-]"
+      },
+      {
+        "sym": "\\(\\Sigma_a^F\\)",
+        "def": "Fuel macroscopic absorption cross section [1/cm]"
+      },
+      {
+        "sym": "\\(\\Sigma_a^{NF}\\)",
+        "def": "Non-fuel macroscopic absorption cross section [1/cm]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Fraction of thermal neutrons absorbed in the fuel."
+      }
+    ]
+  },
+  {
+    "id": "prc-52",
+    "column": "right",
+    "title": "Equation 52: Thermal Reproduction Factor η",
+    "equations": [
+      "\\[\\eta = \\nu \\frac{\\Sigma_f^F}{\\Sigma_a^F}\\]"
+    ],
+    "variables": [
+      {
+        "sym": "\\(\\eta\\)",
+        "def": "Thermal reproduction factor, or thermal fission factor [-]"
+      },
+      {
+        "sym": "\\(\\nu\\)",
+        "def": "Average neutrons per fission [-]"
+      },
+      {
+        "sym": "\\(\\Sigma_f^F\\)",
+        "def": "Macroscopic fission cross section for fuel [1/cm]"
+      },
+      {
+        "sym": "\\(\\Sigma_a^F\\)",
+        "def": "Macroscopic absorption cross section for fuel [1/cm]"
+      }
+    ],
+    "description": [
+      {
+        "p": "Average number of neutrons produced per neutron absorbed in the fuel."
+      }
+    ]
+  }
+]
