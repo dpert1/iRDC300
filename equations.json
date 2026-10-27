@@ -119,7 +119,7 @@
     ],
     "description": [
       {
-        "p": "Number density (particles per unit volume) for isotope i calcuated using number fraction or abundance."
+        "p": "Number density (particles per unit volume) for isotope i calculated using number fraction or abundance."
       }
     ]
   },
@@ -207,7 +207,7 @@
       },
       {
         "sym": "\\(c^2\\)",
-        "def": "Mass-energy equivalence factor, 931.494013 [MeV/amu]"
+        "def": "Mass-energy conversion: 1 amu &times; \\(c^2\\) = 931.494 MeV [MeV/amu]"
       }
     ],
     "description": [
@@ -234,7 +234,7 @@
       },
       {
         "sym": "\\(c^2\\)",
-        "def": "Mass-energy equivalence factor, 931.494013 [MeV/amu]"
+        "def": "Mass-energy conversion: 1 amu &times; \\(c^2\\) = 931.494 MeV [MeV/amu]"
       }
     ],
     "description": [
@@ -431,7 +431,7 @@
       },
       {
         "sym": "\\(c^2\\)",
-        "def": "Mass-energy equivalence factor, 931.494013 [MeV/amu]"
+        "def": "Mass-energy conversion: 1 amu &times; \\(c^2\\) = 931.494 MeV [MeV/amu]"
       }
     ],
     "description": [
@@ -466,12 +466,12 @@
       },
       {
         "sym": "\\(c^2\\)",
-        "def": "Mass-energy equivalence factor, 931.494013 [MeV/amu]"
+        "def": "Mass-energy conversion: 1 amu &times; \\(c^2\\) = 931.494 MeV [MeV/amu]"
       }
     ],
     "description": [
       {
-        "p": "Energy required to remove a neutron from a nucleus — the neutron separation energy. Note: When using this equation for fission calculations, the process is running in reverse (neutron is being injected vs seperated), thus the original nuclide becomes \\(M(^{A-1}_{Z}X)\\)."
+        "p": "Energy required to remove a neutron from a nucleus: the neutron separation energy. For neutron absorption (e.g., fission calculations) the process runs in reverse: the target is \\(^{A-1}_{Z}X\\), the compound nucleus formed is \\(^{A}_{Z}X\\), and \\(S_n\\) of the compound nucleus is the energy released when the neutron is absorbed."
       }
     ]
   },
@@ -501,7 +501,7 @@
       },
       {
         "sym": "\\(c^2\\)",
-        "def": "Mass-energy equivalence factor, 931.494013 [MeV/amu]"
+        "def": "Mass-energy conversion: 1 amu &times; \\(c^2\\) = 931.494 MeV [MeV/amu]"
       }
     ],
     "description": [
@@ -532,7 +532,7 @@
       },
       {
         "sym": "\\(c^2\\)",
-        "def": "Mass-energy equivalence factor, 931.494013 [MeV/amu]"
+        "def": "Mass-energy conversion: 1 amu &times; \\(c^2\\) = 931.494 MeV [MeV/amu]"
       }
     ],
     "description": [
@@ -585,7 +585,7 @@
       },
       {
         "sym": "\\(T_1,T_3\\)",
-        "def": "Kinetic energies of small particles [MeV]"
+        "def": "Kinetic energies of the light particles: 1 (incident) and 3 (emitted) [MeV]"
       },
       {
         "sym": "\\(m_1,m_3,m_4\\)",
@@ -593,12 +593,12 @@
       },
       {
         "sym": "\\(\\theta\\)",
-        "def": "Scattering angle [&deg;]"
+        "def": "Lab-frame angle between the directions of particles 1 and 3 [&deg;]"
       }
     ],
     "description": [
       {
-        "p": "Kinematic relation for Q in a binary reaction including masses, kinetic energies and scattering angle. Implied nomenclature: 1+2 &rarr; 3+4. 1 and 3 are light particles; 2 and 4 are heavy particles. Particle 2 must be stationary."
+        "p": "Kinematic relation for Q in a binary reaction including masses, kinetic energies and scattering angle. Implied nomenclature: 1+2 &rarr; 3+4. 1 and 3 are light particles; 2 and 4 are heavy particles. Particle 2 must be stationary. Non-relativistic."
       }
     ]
   },
@@ -620,7 +620,7 @@
       },
       {
         "sym": "\\(N_A\\)",
-        "def": "Avogadro's number, 6.02214199 &times; 10<sup>23</sup> [#/mol]"
+        "def": "Avogadro's number, 6.02214076 &times; 10<sup>23</sup> (exact) [#/mol]"
       },
       {
         "sym": "\\(A\\)",
@@ -692,7 +692,7 @@
     ],
     "variables": [
       {
-        "sym": "\\(T\\)",
+        "sym": "\\(\\bar{T}\\)",
         "def": "Mean lifetime [s]"
       },
       {
@@ -819,6 +819,9 @@
     "description": [
       {
         "p": "Estimate of Coulombic barrier between two nuclei — energy needed to overcome electrostatic repulsion for fusion or reaction."
+      },
+      {
+        "p": "This is the barrier height for a nuclear radius \\(R = 1.2A^{1/3}\\) fm, i.e. the energy needed in the centre-of-mass frame. The lab-frame kinetic energy of particle 1 must be larger by about \\((1 + m_1/m_2)\\); the difference is small for a light projectile on a heavy target."
       }
     ]
   },
@@ -846,6 +849,9 @@
     "description": [
       {
         "p": "Excitation energy of a compound nucleus after absorption of neutron. Used for comparing excitation energy to threshold energy for fission."
+      },
+      {
+        "p": "This neglects the recoil of the compound nucleus. More precisely \\(E^* = S_n + \\frac{A}{A+1}T_n\\), where A is the target mass number; the difference is negligible for thermal neutrons and small for heavy targets."
       }
     ]
   },
@@ -1031,11 +1037,11 @@
       },
       {
         "sym": "\\(\\Sigma_s\\)",
-        "def": "Macroscopic scattering cross section[1/cm]"
+        "def": "Macroscopic scattering cross section [1/cm]"
       },
       {
         "sym": "\\(\\Sigma_a\\)",
-        "def": "Macroscopic absorption cross section[1/cm]"
+        "def": "Macroscopic absorption cross section [1/cm]"
       }
     ],
     "description": [
@@ -1106,7 +1112,7 @@
     "column": "middle",
     "title": "Equation 38: Mass Attenuation for Mixtures (weighted)",
     "equations": [
-      "\\[\\left(\\frac{\\mu_i}{\\rho}\\right)=\\sum_j w_j \\left(\\frac{\\mu_i}{\\rho}\\right)^j\\]"
+      "\\[\\left(\\frac{\\mu_i}{\\rho}\\right)=\\sum_j w^j \\left(\\frac{\\mu_i}{\\rho}\\right)^j\\]"
     ],
     "variables": [
       {
@@ -1114,17 +1120,20 @@
         "def": "Mass attenuation coefficient for interaction i [cm<sup>2</sup>/g]"
       },
       {
-        "sym": "\\(w_j\\)",
+        "sym": "\\(w^j\\)",
         "def": "Weight fraction of component j [-]"
       },
       {
-        "sym": "\\((\\mu_i/\\rho)_j\\)",
+        "sym": "\\((\\mu_i/\\rho)^j\\)",
         "def": "Mass attenuation coefficient of interaction i for component j [cm<sup>2</sup>/g]"
       }
     ],
     "description": [
       {
         "p": "Composite mass attenuation coefficient formed from weight-fraction-weighted component contributions."
+      },
+      {
+        "p": "The superscript j labels the component; it is not a power."
       }
     ]
   },
@@ -1180,7 +1189,7 @@
     "variables": [
       {
         "sym": "\\(E&#x27;\\)",
-        "def": "= Kinetic energy of scattered neutron [eV or MeV]"
+        "def": "Kinetic energy of scattered neutron [eV or MeV]"
       },
       {
         "sym": "\\(E\\)",
@@ -1225,6 +1234,9 @@
     "description": [
       {
         "p": "Average scattered energy from elastic neutron scattering reaction."
+      },
+      {
+        "p": "Assumes elastic scattering off a target at rest, isotropic in the centre-of-mass frame."
       }
     ]
   },
@@ -1297,7 +1309,7 @@
     ],
     "description": [
       {
-        "p": "Average logarithmic energy decrement per collision used in slowing-down theory for neutrons. Also referred to as average lethargy loss."
+        "p": "Average logarithmic energy decrement per collision used in slowing-down theory for neutrons. Also referred to as the average lethargy gain per collision (lethargy increases as the neutron loses energy)."
       }
     ]
   },
@@ -1346,12 +1358,15 @@
       },
       {
         "sym": "\\(\\phi(E)\\)",
-        "def": "Neutron flux at energy E [1/(cm<sup>2</sup>-s)]"
+        "def": "Neutron flux (one-group, or monoenergetic at energy E) [1/(cm<sup>2</sup>-s)]"
       }
     ],
     "description": [
       {
         "p": "Reaction rate per unit volume obtained by multiplying macroscopic cross section by particle flux."
+      },
+      {
+        "p": "For a spectrum of energies, \\(\\phi(E)\\) is the flux per unit energy and the rate is \\(R_i = \\int \\Sigma_i(E)\\,\\phi(E)\\,dE\\)."
       }
     ]
   },
@@ -1488,7 +1503,7 @@
     "column": "middle",
     "title": "Equation 51: Thermal Utilization Factor f",
     "equations": [
-      "\\[f = \\frac{\\Sigma_a^F}{\\Sigma_a^F + \\Sigma_a^{NF}}\\]"
+      "\\[f = \\frac{\\overline{\\Sigma}_a^F}{\\overline{\\Sigma}_a^F + \\overline{\\Sigma}_a^{NF}}\\]"
     ],
     "variables": [
       {
@@ -1496,12 +1511,12 @@
         "def": "Thermal utilization factor [-]"
       },
       {
-        "sym": "\\(\\Sigma_a^F\\)",
-        "def": "Fuel macroscopic absorption cross section [1/cm]"
+        "sym": "\\(\\overline{\\Sigma}_a^F\\)",
+        "def": "Thermal-averaged fuel macroscopic absorption cross section [1/cm]"
       },
       {
-        "sym": "\\(\\Sigma_a^{NF}\\)",
-        "def": "Non-fuel macroscopic absorption cross section [1/cm]"
+        "sym": "\\(\\overline{\\Sigma}_a^{NF}\\)",
+        "def": "Thermal-averaged non-fuel macroscopic absorption cross section [1/cm]"
       }
     ],
     "description": [
@@ -1515,7 +1530,7 @@
     "column": "right",
     "title": "Equation 52: Thermal Reproduction Factor η",
     "equations": [
-      "\\[\\eta = \\nu \\frac{\\Sigma_f^F}{\\Sigma_a^F}\\]"
+      "\\[\\eta = \\nu \\frac{\\overline{\\Sigma}_f^F}{\\overline{\\Sigma}_a^F}\\]"
     ],
     "variables": [
       {
@@ -1527,12 +1542,12 @@
         "def": "Average neutrons per fission [-]"
       },
       {
-        "sym": "\\(\\Sigma_f^F\\)",
-        "def": "Macroscopic fission cross section for fuel [1/cm]"
+        "sym": "\\(\\overline{\\Sigma}_f^F\\)",
+        "def": "Thermal-averaged macroscopic fission cross section for fuel [1/cm]"
       },
       {
-        "sym": "\\(\\Sigma_a^F\\)",
-        "def": "Macroscopic absorption cross section for fuel [1/cm]"
+        "sym": "\\(\\overline{\\Sigma}_a^F\\)",
+        "def": "Thermal-averaged macroscopic absorption cross section for fuel [1/cm]"
       }
     ],
     "description": [

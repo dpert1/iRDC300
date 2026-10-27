@@ -2,14 +2,15 @@
 Guidance for AI coding agents working on this repo: a small static website (iRDC, the NE300 interactive reference data card) hosted on Netlify. There is no build step.
 
 ## Key files
-- `index.html`: the whole app. Popup UI (`#equationPopup`), MathJax setup, the popup renderer and one delegated click handler.
+- `index.html`: the page. Sets `window.IRDC = { svg, data }`, loads `irdc.css`, `irdc.js` and MathJax, and holds the popup markup (`#equationPopup`).
+- `irdc.js` / `irdc.css`: the shared popup engine and styles. These two files are byte-identical in the iRDC300, iRDC450, iFNEK and iFNEK_C repos; change them in one and copy them unchanged to the others.
 - `img/rdc_both.svg`: the card artwork. Clickable hotspots are invisible `rect` elements with ids `prc-<n>` (e.g. `prc-13`).
 - `equations.json`: popup content, one entry per hotspot:
   `{ "id": "prc-<n>", "column": "left|middle|right", "title": "...", "equations": ["\\[...\\]"], "variables": [{ "sym": "\\(...\\)", "def": "... [units]" }], "description": [{ "p": "..." } or { "eq": "\\[...\\]" }] }`
 - `_headers`: Netlify cache rules.
 
 ## How it works
-On load, `index.html` fetches the SVG and `equations.json`, inserts the SVG into `#rdcContainer`, and adds one click listener on the SVG. Clicking an element whose id starts with `prc-` renders that entry into the popup and typesets it with MathJax (pinned to 3.2.2). `column` only affects popup placement: `right` places it toward the centre-left; `left` and `middle` place it beside the click.
+On load, `irdc.js` fetches the SVG and `equations.json`, inserts the SVG into `#rdcContainer`, marks every element whose id appears in the data file as a hotspot (`data-hotspot`, focusable, labelled), and adds one click and one keydown listener on the SVG. Clicking a hotspot (or Enter/Space on a focused one) renders that entry into the popup and typesets it with MathJax (pinned to 3.2.2). Esc or a click outside closes it. `column` only affects popup placement: `right` places it toward the centre-left; `left` and `middle` place it beside the click. Below 700px wide, `irdc.css` shows the popup as a bottom sheet.
 
 ## Adding or editing an equation
 1. Edit or add the entry in `equations.json`. LaTeX goes in `\\( \\)` (inline) or `\\[ \\]` (display), with backslashes escaped for JSON.
