@@ -360,7 +360,7 @@
     "column": "left",
     "title": "Equation 13: Semi-empirical Mass (Weizsäcker) Formula",
     "equations": [
-      "\\[E_B = a_v A - a_s A^{2/3} - a_c \\frac{Z^2}{A^{1/3}} - a_a \\frac{(A-2Z)^2}{A} \\pm a_p A^{-1/2}\\]"
+      "\\[E_B = a_v A - a_s A^{2/3} - a_c \\frac{Z^2}{A^{1/3}} - a_a \\frac{(A-2Z)^2}{A} - \\frac{\\pm a_p}{\\sqrt{A}}\\]"
     ],
     "variables": [
       {
@@ -368,8 +368,24 @@
         "def": "Binding energy [MeV]"
       },
       {
-        "sym": "\\(a_v,a_s,a_c,a_a,a_p\\)",
-        "def": "Weizsäcker coefficients (volume, surface, coulomb, asymmetry, parity)"
+        "sym": "\\(a_v\\)",
+        "def": "Volume coefficient, 15.835 [MeV]"
+      },
+      {
+        "sym": "\\(a_s\\)",
+        "def": "Surface coefficient, 18.33 [MeV]"
+      },
+      {
+        "sym": "\\(a_c\\)",
+        "def": "Coulomb coefficient, 0.714 [MeV]"
+      },
+      {
+        "sym": "\\(a_a\\)",
+        "def": "Asymmetry coefficient, 23.20 [MeV]"
+      },
+      {
+        "sym": "\\(\\pm a_p\\)",
+        "def": "Pairing coefficient, used with its sign: +11.2 MeV if Z and N are both odd (o/o), 0 if A is odd (e/o or o/e), &minus;11.2 MeV if Z and N are both even (e/e) [MeV]"
       },
       {
         "sym": "\\(A\\)",
@@ -382,7 +398,10 @@
     ],
     "description": [
       {
-        "p": "Semi-empirical formula estimating nuclear binding energy using five terms: volume, surface, Coulomb, asymmetry, and parity."
+        "p": "Semi-empirical formula estimating nuclear binding energy using five terms: volume, surface, Coulomb, asymmetry, and pairing."
+      },
+      {
+        "p": "The pairing term is subtracted, so with the signs above an even-even nucleus gains \\(11.2/\\sqrt{A}\\) MeV of binding and an odd-odd nucleus loses it."
       }
     ]
   },
@@ -408,7 +427,7 @@
       },
       {
         "sym": "\\(M(^{A}_{Z}X)\\)",
-        "def": "Mass of element \\(^{A}_{Z}X\\) [amu]"
+        "def": "Atomic mass of the neutral atom \\(^{A}_{Z}X\\) (nucleus plus Z electrons) [amu]"
       },
       {
         "sym": "\\(c^2\\)",
@@ -417,7 +436,7 @@
     ],
     "description": [
       {
-        "p": "Binding energy computed from mass differences between constituent nucleons and the measured nuclear mass."
+        "p": "Binding energy computed from the mass difference between the separated constituents and the atom. All masses are neutral-atom (tabulated) masses: the Z electrons in \\(M(^{A}_{Z}X)\\) cancel the Z electrons counted in \\(Z\\,M(^{1}_{1}H)\\), which is why the hydrogen atom mass is used rather than the proton mass."
       }
     ]
   },
@@ -519,6 +538,9 @@
     "description": [
       {
         "p": "Energy released (Q-value) of a nuclear reaction computed from the difference in rest masses."
+      },
+      {
+        "p": "If you use tabulated atomic masses, the electrons must balance on both sides. They do automatically for most reactions and for \\(\\beta^-\\) decay, but not for \\(\\beta^+\\) decay, where \\(Q = [M(\\text{parent}) - M(\\text{daughter}) - 2m_e]c^2\\) (\\(2m_ec^2 = 1.022\\) MeV)."
       }
     ]
   },
@@ -882,6 +904,9 @@
     "description": [
       {
         "p": "Exponential attenuation of photon beam intensity by a material."
+      },
+      {
+        "p": "This gives only the uncollided particles: those that have not interacted at all. Some scattered particles still reach the point of interest, so the actual flux (and dose) behind a shield is higher. Real shielding calculations multiply by a buildup factor \\(B \\geq 1\\)."
       }
     ]
   },
@@ -912,7 +937,10 @@
     ],
     "description": [
       {
-        "p": "Neutron flux decreases exponentially with distance in a medium."
+        "p": "The uncollided neutron flux in a narrow beam decreases exponentially with distance in a medium."
+      },
+      {
+        "p": "This gives only the uncollided particles: those that have not interacted at all. Some scattered particles still reach the point of interest, so the actual flux (and dose) behind a shield is higher. Real shielding calculations multiply by a buildup factor \\(B \\geq 1\\)."
       }
     ]
   },
@@ -1061,12 +1089,15 @@
       },
       {
         "sym": "\\(g_i(T)\\)",
-        "def": "Westcott factor - Correction factor for temperature of target nuclide [-]"
+        "def": "Westcott factor: non-1/v correction for thermal (Maxwellian-averaged) cross sections; equals 1 for 1/v absorbers and for non-thermal problems [-]"
       }
     ],
     "description": [
       {
-        "p": "Macroscopic cross section equals number density times microscopic cross section. Microscopic cross sections are tabulated in barns and are dependent on the incident neutron energy."
+        "p": "Macroscopic cross section equals number density times microscopic cross section (\\(\\Sigma = N\\sigma\\)). Microscopic cross sections are tabulated in barns and are dependent on the incident neutron energy."
+      },
+      {
+        "p": "The Westcott factor only matters when averaging over a thermal (Maxwellian) neutron spectrum, for nuclides whose cross section does not follow \\(1/v\\). The full thermal average also includes the factors \\(\\frac{\\sqrt{\\pi}}{2}\\sqrt{T_0/T}\\) applied to the 0.0253 eV value: \\(\\bar{\\sigma} = \\frac{\\sqrt{\\pi}}{2}\\, g(T) \\sqrt{T_0/T}\\, \\sigma(E_0)\\), with \\(T_0\\) = 293.6 K. For any other problem, take \\(g = 1\\)."
       }
     ]
   },
@@ -1132,7 +1163,10 @@
     ],
     "description": [
       {
-        "p": "This equation works for both neutrons and photons as geometric and exponential attenuation operate in the same way. Flux from a point source decreases with inverse square law and exponential attenuation in the medium. Applicable for photons but with &mu; instead of &Sigma;"
+        "p": "This equation works for both neutrons and photons, as geometric and exponential attenuation operate in the same way: flux from a point source decreases with the inverse square law and exponential attenuation in the medium. For photons, use \\(\\mu_t\\) instead of \\(\\Sigma_t\\)."
+      },
+      {
+        "p": "This gives only the uncollided particles: those that have not interacted at all. Some scattered particles still reach the point of interest, so the actual flux (and dose) behind a shield is higher. Real shielding calculations multiply by a buildup factor \\(B \\geq 1\\)."
       }
     ]
   },
@@ -1240,7 +1274,7 @@
     ],
     "description": [
       {
-        "p": "Collision parameter definition. Maximum fractional energy loss resulting from elastic collision with an incident fast-moving neutron."
+        "p": "Collision parameter definition. \\(\\alpha\\) is the smallest possible ratio \\(E'/E\\) after an elastic collision (a head-on collision), so the maximum fractional energy loss in one collision is \\(1 - \\alpha\\). For hydrogen (A = 1), \\(\\alpha = 0\\) and a neutron can lose all of its energy in one collision."
       }
     ]
   },
